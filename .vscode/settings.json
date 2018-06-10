@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "iostream": "cpp"
+    },
+    "files.encoding": "gb2312",
+    "editor.formatOnType": true,
+    "C_Cpp.errorSquiggles": "Disabled",
+    "editor.fontSize": 14,
+    "typescript.useCodeSnippetsOnMethodSuggest": true,
+}
