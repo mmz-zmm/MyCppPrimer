@@ -1,11 +1,13 @@
 {
     "files.associations": {
         "stdio.h": "c",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     },
     "files.encoding": "gb2312",
     "editor.formatOnType": true,
     "C_Cpp.errorSquiggles": "Disabled",
     "editor.fontSize": 14,
     "typescript.useCodeSnippetsOnMethodSuggest": true,
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
