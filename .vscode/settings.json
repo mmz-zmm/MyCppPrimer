@@ -9,5 +9,5 @@
     "C_Cpp.errorSquiggles": "Disabled",
     "editor.fontSize": 14,
     "typescript.useCodeSnippetsOnMethodSuggest": true,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
+    // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
