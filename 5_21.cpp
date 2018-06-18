@@ -8,6 +8,9 @@ int main()
     string pre_word;
     string word;
     while (cin >> word){
+        if(!isupper(word[0]) ) // constraint: start with upppercase character
+            continue;
+
         if(word == pre_word){
             break;
         }
