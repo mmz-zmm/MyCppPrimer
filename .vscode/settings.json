@@ -2,12 +2,17 @@
     "files.associations": {
         "stdio.h": "c",
         "iostream": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iosfwd": "cpp"
     },
     "files.encoding": "gb2312",
     "editor.formatOnType": true,
-    "C_Cpp.errorSquiggles": "Disabled",
+"C_Cpp.errorSquiggles": "Disabled",
     "editor.fontSize": 14,
-    "typescript.useCodeSnippetsOnMethodSuggest": true,
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake.exe",
+    "cmake.generator": "MinGW Makefiles",
+    "cmake.preferredGenerators": [
+        "MinGW Makefiles"
+    ]
     // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }

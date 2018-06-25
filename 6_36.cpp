@@ -26,6 +26,9 @@ decltype(odd) &arrPtr2(int i)
 {
     return (i % 2) ? odd : even;
 }
+
+const string &shorterString(const string &s1, const string &s2);
+auto &r = shorterString("a", "b");
 int main()
 {
     decltype(odd) *a = arrPtr(2);

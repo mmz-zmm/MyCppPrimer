@@ -6,15 +6,20 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "${file}",
-                "-o", "${fileDirname}/debug/${fileBasenameNoExtension}.exe",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/debug/${fileBasenameNoExtension}.exe",
                 "-Wall",
-                "-std=c++11"
+                "-std=c++11" //,"-D","NDEBUG"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
         }
     ]
 }
