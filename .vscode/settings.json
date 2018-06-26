@@ -5,9 +5,9 @@
         "ostream": "cpp",
         "iosfwd": "cpp"
     },
-    "files.encoding": "gb2312",
+    //"files.encoding": "gb2312",
     "editor.formatOnType": true,
-"C_Cpp.errorSquiggles": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
     "editor.fontSize": 14,
     "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake.exe",
     "cmake.generator": "MinGW Makefiles",

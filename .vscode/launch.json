@@ -8,7 +8,8 @@
             "name": "C Launch (Windows)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/debug/${fileBasenameNoExtension}.exe",
+            //"program": "${fileDirname}/debug/${fileBasenameNoExtension}.exe",
+            "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
@@ -16,7 +17,7 @@
             "externalConsole": true,
             "MIMode": "gdb",
             "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-            "preLaunchTask": "build task",
+            //"preLaunchTask": "build task",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
