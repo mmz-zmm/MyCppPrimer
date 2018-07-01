@@ -1,5 +1,7 @@
-#include "7_4_Person.h"
+#include "include/7_4_Person.h"
 #include <iostream>
+using std::istream;
+using std::ostream;
 
 istream &read(istream &is, Person & person)
 {
@@ -11,3 +13,4 @@ ostream &print(ostream &os, const Person & person)
     os << person.name << " " << person.address;
     return os;
 }
+

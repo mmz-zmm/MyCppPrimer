@@ -4,23 +4,23 @@ using namespace std;
 
 int main()
 {
-    Sales_data total;
-    if(read(total))
+    Sales_data total(cin);
+    if(cin)
     {
-        Sales_data trans;
-        while(read(trans))
+        while(cin)
         {
+            Sales_data trans(cin);
             if(total.isbn() == trans.isbn())
             {
                 total.combine(trans);
             }
             else
             {
-                print(total);
+                print(cout, total) << endl;
                 total = trans;
             }
         }
-        print(total);
+        print(cout, total)<<endl;
     }
     else
     {

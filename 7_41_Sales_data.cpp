@@ -1,8 +1,7 @@
 #include <iostream>
-#include "Sales_data.h"
+#include "include/7_41_Sales_data.h"
 
 using namespace std;
-
 
 Sales_data& Sales_data::combine(const Sales_data &rhs)
 {
@@ -27,7 +26,7 @@ Sales_data add(const Sales_data &lhs, const Sales_data &rhs)
 
 istream &read(istream &is, Sales_data & item)
 {
-    double price;
+    double price{0.0};
     is >> item.bookNo >> item.units_sold >> price;
     item.revenue = price * item.units_sold;
     return is;
