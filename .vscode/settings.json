@@ -3,7 +3,8 @@
         "stdio.h": "c",
         "iostream": "cpp",
         "ostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "vector": "cpp"
     },
     //"files.encoding": "gb2312",
     "editor.formatOnType": true,
@@ -13,6 +14,8 @@
     "cmake.generator": "MinGW Makefiles",
     "cmake.preferredGenerators": [
         "MinGW Makefiles"
-    ]
+    ],
+    "python.pythonPath": "C:\\Users\\zhaom\\Anaconda3\\python.exe",
+    "C_Cpp.configurationWarnings": "Disabled"
     // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }

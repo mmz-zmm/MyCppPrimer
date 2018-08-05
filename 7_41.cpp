@@ -1,8 +1,10 @@
 #include <iostream>
+#include <string>
 #include "include/7_41_Sales_data.h"
 using namespace std;
 using std::cout;
 using std::endl;
+using std::string;
 
 int main()
 {
@@ -21,6 +23,7 @@ int main()
     cout << "\n4. using istream as parameter: " << endl;
     cout << "----------------" << endl;
     Sales_data s4(std::cin);
+
 
     return 0;
 }

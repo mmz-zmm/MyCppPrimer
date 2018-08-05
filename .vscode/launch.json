@@ -10,7 +10,7 @@
             "request": "launch",
             //"program": "${fileDirname}/debug/${fileBasenameNoExtension}.exe",
             "program": "${command:cmake.launchTargetPath}",
-            "args": [],
+            "args": ["./Sales_total.txt","./Sales_out.txt"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
