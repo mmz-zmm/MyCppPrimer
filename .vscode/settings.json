@@ -16,6 +16,7 @@
         "MinGW Makefiles"
     ],
     "python.pythonPath": "C:\\Users\\zhaom\\Anaconda3\\python.exe",
-    "C_Cpp.configurationWarnings": "Disabled"
+    "C_Cpp.configurationWarnings": "Disabled",
+    "cmake.configureOnOpen": false
     // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
