@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     
-    ifstream fin("./8_10_input.txt");
+    ifstream fin("./data/8_10_input.txt");
     vector<string> contents;
     string line;
     while(getline(fin, line))

@@ -1,11 +1,17 @@
 {
     "configurations": [
         {
-            "name": "MinGW",
+            "name": "Win32",
             "intelliSenseMode": "clang-x64",
             "compilerPath": "C:/MinGW/bin/g++.exe",
             "includePath": [
-                "${workspaceFolder}"
+                "${workspaceFolder}",
+                "C:\\MinGW\\include",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\mingw32",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\backwoard",
+                "C:\\MinGW\\lib\\gcc\\mingw32\\6.3.0\\include\\c++\\tr1"
             ],
             "defines": [],
             "browse": {
@@ -17,8 +23,8 @@
             },
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
-            "configurationProvider": "vector-of-bool.cmake-tools"
+            "configurationProvider": "vector-of-bool.cmake-tools",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4

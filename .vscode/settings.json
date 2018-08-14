@@ -17,6 +17,7 @@
     ],
     "python.pythonPath": "C:\\Users\\zhaom\\Anaconda3\\python.exe",
     "C_Cpp.configurationWarnings": "Disabled",
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "C_Cpp.intelliSenseEngineFallback": "Enabled"
     // "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"
 }
