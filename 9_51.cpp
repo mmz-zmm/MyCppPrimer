@@ -32,7 +32,7 @@ Date::Date(const string &str){
     if(str.find("Nov") != string::npos) month = 11;
     if(str.find("Dec") != string::npos) month = 12;
 
-    auto pos = str.find_last_not_of("0123456789 ");
+    auto pos = str.find_last_not_of("0123456789");
     day = stoi(str.substr(str.find_first_of("0123456789"), pos));
     year = stoi(str.substr(pos + 1));
 }
