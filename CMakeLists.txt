@@ -9,7 +9,7 @@ add_compile_options(-std=c++11)
 include_directories(include)
 #set(SRC 7_13.cpp Sales_data.cpp)
 #set(SRC 7_41.cpp 7_41_Sales_data.cpp)
-set(SRC 10_31.cpp)
+set(SRC 11_4.cpp)
 add_executable(my_cppPrimer ${SRC})
 
 
