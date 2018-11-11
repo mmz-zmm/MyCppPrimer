@@ -9,7 +9,9 @@
         "deque": "cpp",
         "list": "cpp",
         "unordered_map": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "*.tcc": "cpp",
+        "istream": "cpp"
     },
     //"files.encoding": "gb2312",
     "editor.formatOnType": true,
