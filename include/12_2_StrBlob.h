@@ -19,10 +19,11 @@ class StrBlob{
     const string &front() const;
     string &back();
     const string &back() const;
+    size_t count(){ return data.use_count();}
 
-  private:
-    shared_ptr<vector<string>> data;
-    void check(size_type i, const string &msg) const;
+      private:
+        shared_ptr<vector<string>> data;
+        void check(size_type i, const string &msg) const;
 };
 
 StrBlob::StrBlob(): data(make_shared<vector<string>>()){}
