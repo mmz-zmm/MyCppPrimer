@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 class HasPtr{
     public:
     friend void swap(HasPtr &, HasPtr &);
+    friend bool operator<(const HasPtr &lhs, const HasPtr &rhs);
     HasPtr(const string &s = string()):ps(new string(s)), i(0){}
     HasPtr(const HasPtr & hp){
         if( hp.ps != ps )
@@ -36,10 +39,21 @@ inline void swap(HasPtr&lhs, HasPtr&rhs)
     swap(lhs.i, rhs.i);
 }
 
+bool operator <(const HasPtr & lhs, const HasPtr & rhs)
+{
+    return *(lhs.ps) < *(rhs.ps);
+}     
+
 int main()
 {
-    HasPtr p1("hello world"), p2;
-    p2 = p1;
-    cout << p2.content() << endl;
+    vector<HasPtr> vec;
+    vec.push_back(HasPtr("The"));
+    vec.push_back(HasPtr("cat"));
+    vec.push_back(HasPtr("sit"));
+    vec.push_back(HasPtr("on"));
+    vec.push_back(HasPtr("the"));
+    vec.push_back(HasPtr("mat"));
+    sort(vec.begin(), vec.end());
+    
     return 0;
 }
