@@ -39,9 +39,12 @@ Message::~Message()
     remove_from_Folders();
 }
 
-Message& Message::operator=(Message rhs)
+Message& Message::operator=(const Message& rhs)
 {
-    swap(*this, rhs);
+    remove_from_Folders();
+    contents = rhs.contents;
+    folders = rhs.folders;
+    add_to_Folders(rhs);
     return *this;
 }
 void swap(Message& lhs, Message& rhs)
@@ -68,9 +71,11 @@ Folder::Folder(const Folder& f):messages(f.messages)
 {
     add_to_Messages(f);
 }
-Folder& Folder::operator=(Folder rhs)
+Folder& Folder::operator=(const Folder& rhs)
 {
-    swap(*this, rhs);
+    remove_from_Messages();
+    messages = rhs.messages;
+    add_to_Messages(rhs);
     return *this;
 }
 Folder::~Folder()

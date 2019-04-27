@@ -16,7 +16,7 @@ class Message{
     explicit Message(const std::string &str = "") : contents(str) {}
 
       Message(const Message &);
-      Message &operator=(Message );
+      Message &operator=(const Message& );
       ~Message();
 
       void save(Folder &);
@@ -39,7 +39,7 @@ class Folder{
       friend void swap(Folder &lhs, Folder &rhs);
       Folder() = default;
       Folder(const Folder &);
-      Folder &operator=(Folder);
+      Folder &operator=(const Folder&);
       ~Folder();
 
     private:
