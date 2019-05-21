@@ -1,6 +1,8 @@
 #include "include/13_39_StrVec.h"
 #include <memory>
 #include <string>
+#include <algorithm>
+#include <iostream>
 
 /*类内静态成员的类外初始化*/
 std::allocator<std::string> StrVec::alloc;
@@ -22,8 +24,10 @@ void StrVec::free()
 {
     if(elements)
     {
-        for (auto p = first_free; p != elements;)
-            alloc.destroy(--p);
+        // for (auto p = first_free; p != elements;)
+        //     alloc.destroy(--p);
+        std::for_each(begin(), end(), [this](std::string & s) { alloc.destroy(&s); });
+        std::cout << "destroyed with size of " << size() << "\n";
         alloc.deallocate(elements, cap - elements);
     }
 }
@@ -33,8 +37,10 @@ StrVec::StrVec(const StrVec & s)
     elements = newdata.first;
     first_free = cap = newdata.second;
 }
+
 StrVec::~StrVec()
 {
+    std::cout << "destroy...\n";
     free();
 }
 
@@ -61,3 +67,44 @@ void StrVec::reallocate()
     first_free = dest;
     cap = elements + newcapacity;
 }
+
+void StrVec::reserve(size_t n)
+{
+    if(capacity() < n)
+        reallocate();
+}
+void StrVec::resize(size_t n)
+{
+    resize(n, std::string());
+}
+void StrVec::resize(size_t n, const std::string& s)
+{
+    if( n < size()){
+        while(first_free != elements + n){
+            alloc.destroy(--first_free);
+        }
+    }
+    else
+    {
+        if(capacity() < n)
+            reserve(n);
+        for (auto i = size(); i != n; ++i)
+            alloc.construct(first_free++, s);
+    }   
+}
+
+StrVec::StrVec(std::initializer_list<std::string> il)
+{
+    auto newdata = alloc_n_copy(il.begin(), il.end());
+    elements = newdata.first;
+    first_free = cap = newdata.second;
+}
+
+void StrOut(const StrVec& s)
+{
+    for(auto ps = s.begin(); ps != s.end(); ps++)
+    {
+        std::cout << *ps << "\n";
+    }    
+}
+

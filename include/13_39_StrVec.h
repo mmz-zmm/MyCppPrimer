@@ -2,6 +2,7 @@
 #include <string>
 #include <memory>
 #include <utility>
+#include <initializer_list>
 
 class StrVec
 {
@@ -9,6 +10,7 @@ class StrVec
   public:
     StrVec():elements(nullptr), first_free(nullptr),cap(nullptr){}
     StrVec(const StrVec &);
+    StrVec(std::initializer_list<std::string>);
     StrVec &operator=(const StrVec &);
     ~StrVec();
     void push_back(const std::string &);
@@ -16,7 +18,11 @@ class StrVec
     size_t capacity() const { return cap - elements; }
     std::string *begin() const { return elements; }
     std::string *end() const { return first_free; }
-      private:
+    void reserve(size_t n);
+    void resize(size_t n);
+    void resize(size_t n, const std::string & s);
+
+  private:
     /* 类的静态成员需要类外初始化 */
     static std::allocator<std::string> alloc;
     std::pair<std::string *, std::string *> alloc_n_copy(const std::string *, const std::string *);
@@ -31,4 +37,6 @@ class StrVec
     std::string *first_free;
     std::string *cap;
 };
+
+void StrOut(const StrVec &s);
 
