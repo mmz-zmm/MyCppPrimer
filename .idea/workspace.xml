@@ -2,35 +2,35 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
-      <config projectName="my_cppPrimer" targetName="ContinuousConfigure" />
-      <config projectName="my_cppPrimer" targetName="NightlyUpdate" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalUpdate" />
-      <config projectName="my_cppPrimer" targetName="ContinuousStart" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalMemCheck" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalCoverage" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalBuild" />
       <config projectName="my_cppPrimer" targetName="NightlyMemoryCheck" />
-      <config projectName="my_cppPrimer" targetName="Continuous" />
-      <config projectName="my_cppPrimer" targetName="NightlyCoverage" />
-      <config projectName="my_cppPrimer" targetName="ContinuousTest" />
-      <config projectName="my_cppPrimer" targetName="NightlyStart" />
       <config projectName="my_cppPrimer" targetName="ExperimentalTest" />
-      <config projectName="my_cppPrimer" targetName="ContinuousMemCheck" />
-      <config projectName="my_cppPrimer" targetName="ContinuousSubmit" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalConfigure" />
-      <config projectName="my_cppPrimer" targetName="ContinuousUpdate" />
-      <config projectName="my_cppPrimer" targetName="ExperimentalStart" />
+      <config projectName="my_cppPrimer" targetName="NightlyCoverage" />
       <config projectName="my_cppPrimer" targetName="ExperimentalSubmit" />
-      <config projectName="my_cppPrimer" targetName="NightlyBuild" />
-      <config projectName="my_cppPrimer" targetName="NightlyConfigure" />
-      <config projectName="my_cppPrimer" targetName="ContinuousCoverage" />
-      <config projectName="my_cppPrimer" targetName="ContinuousBuild" />
-      <config projectName="my_cppPrimer" targetName="Experimental" />
-      <config projectName="my_cppPrimer" targetName="NightlyTest" />
-      <config projectName="my_cppPrimer" targetName="my_cppPrimer" />
-      <config projectName="my_cppPrimer" targetName="Nightly" />
-      <config projectName="my_cppPrimer" targetName="NightlySubmit" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalConfigure" />
+      <config projectName="my_cppPrimer" targetName="NightlyStart" />
       <config projectName="my_cppPrimer" targetName="NightlyMemCheck" />
+      <config projectName="my_cppPrimer" targetName="NightlyUpdate" />
+      <config projectName="my_cppPrimer" targetName="Nightly" />
+      <config projectName="my_cppPrimer" targetName="NightlyTest" />
+      <config projectName="my_cppPrimer" targetName="NightlyConfigure" />
+      <config projectName="my_cppPrimer" targetName="my_cppPrimer" />
+      <config projectName="my_cppPrimer" targetName="ContinuousUpdate" />
+      <config projectName="my_cppPrimer" targetName="ContinuousConfigure" />
+      <config projectName="my_cppPrimer" targetName="ContinuousCoverage" />
+      <config projectName="my_cppPrimer" targetName="NightlyBuild" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalUpdate" />
+      <config projectName="my_cppPrimer" targetName="ContinuousBuild" />
+      <config projectName="my_cppPrimer" targetName="ContinuousStart" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalBuild" />
+      <config projectName="my_cppPrimer" targetName="ContinuousTest" />
+      <config projectName="my_cppPrimer" targetName="Continuous" />
+      <config projectName="my_cppPrimer" targetName="ContinuousMemCheck" />
+      <config projectName="my_cppPrimer" targetName="NightlySubmit" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalCoverage" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalMemCheck" />
+      <config projectName="my_cppPrimer" targetName="ContinuousSubmit" />
+      <config projectName="my_cppPrimer" targetName="ExperimentalStart" />
+      <config projectName="my_cppPrimer" targetName="Experimental" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -56,11 +56,11 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="12_17.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/12_17.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
+            <state relative-caret-position="90">
               <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
@@ -315,22 +315,22 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962406" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39721254" sideWeight="0.50300753" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39721254" sideWeight="0.50300753" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32869565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39721254" sideWeight="0.49699247" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39721254" sideWeight="0.49699247" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,21 +356,21 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/12_17.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/12_17.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

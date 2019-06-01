@@ -51,6 +51,13 @@ String::String(const String & s)
     std::cout << "copy constructor\n";
 }
 
+String::String(String && s) noexcept
+: elements(s.elements), first_free(s.first_free),cap(s.cap)
+{
+    s.elements = s.first_free = s.cap = nullptr;
+    std::cout << "move consructor\n";
+}
+
 String& String::operator=(const String& rhs)
 {
     auto data = alloc_n_copy(rhs.elements, rhs.first_free);
@@ -58,6 +65,20 @@ String& String::operator=(const String& rhs)
     elements = data.first;
     first_free = data.second;
     std::cout << "copy-assignment\n";
+    return *this;
+}
+
+String& String::operator=(String && rhs)
+{
+    if(this != &rhs)
+    {
+        free();
+        elements = rhs.elements;
+        first_free = rhs.first_free;
+        cap = rhs.cap;
+        rhs.first_free = rhs.first_free = rhs.cap = nullptr;
+    }
+    std::cout << "move-assignment\n";
     return *this;
 }
 

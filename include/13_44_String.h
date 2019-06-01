@@ -9,7 +9,9 @@ class String{
       String() : String("") {}
       String(const char *);
       String(const String &);
+      String(String &&) noexcept;
       String &operator=(const String &);
+      String &operator=(String &&);
       ~String();
 
       void push_back(char);

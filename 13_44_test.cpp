@@ -15,6 +15,7 @@ void bar(const String& x)
 String baz()
 {
     String ret("world");
+    String five = ret;
     return ret;
 }
 
@@ -42,5 +43,13 @@ int main()
     bar("temporary");
     String s5 = baz();
 
+    std::cout << "----\n";
+
+    std::vector<String> v_str;
+    v_str.push_back("Hello");
+    v_str.push_back("World");
+    v_str.push_back("How");
+    v_str.push_back("are");
+    v_str.push_back("You");
     return 0;
 }

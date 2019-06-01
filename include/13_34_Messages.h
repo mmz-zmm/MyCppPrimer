@@ -16,7 +16,9 @@ class Message{
     explicit Message(const std::string &str = "") : contents(str) {}
 
       Message(const Message &);
-      Message &operator=(const Message& );
+      Message(Message &&);
+      Message &operator=(const Message &);
+      Message &operator=(Message &&);
       ~Message();
 
       void save(Folder &);
@@ -27,7 +29,8 @@ class Message{
       std::set<Folder *> folders;
       void add_to_Folders(const Message &);
       void remove_from_Folders();
-      void addFolder(Folder * f) { folders.insert(f); }
+      void move_Folders(Message *m);
+      void addFolder(Folder *f) { folders.insert(f); }
       void remFolder(Folder * f) { folders.erase(f); }
 };
 
