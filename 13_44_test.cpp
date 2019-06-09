@@ -15,8 +15,7 @@ void bar(const String& x)
 String baz()
 {
     String ret("world");
-    String five = ret;
-    return ret;
+    return ret;   // return value optimize
 }
 
 int main()
@@ -41,12 +40,12 @@ int main()
     bar(s1);
     foo("temporary");
     bar("temporary");
-    String s5 = baz();
+    String s5 = baz();  // 
 
     std::cout << "----\n";
 
     std::vector<String> v_str;
-    v_str.push_back("Hello");
+    v_str.push_back("Hello"); // copy avoided
     v_str.push_back("World");
     v_str.push_back("How");
     v_str.push_back("are");
