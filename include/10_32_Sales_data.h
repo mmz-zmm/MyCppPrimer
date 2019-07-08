@@ -51,13 +51,22 @@ std::ostream & operator<<(std::ostream & out, const Sales_data & s)
         << s.revenue << " " << s.avg_price();
     return out;
 }
-std::istream & operator>>(std::istream & in, Sales_data & s)
+// std::istream & operator>>(std::istream & in, Sales_data & s)
+// {
+//     double price;
+//     in >> s.bookNo >> s.units_sold >> price;
+//     if(in)
+//         s.revenue = s.units_sold * price;
+//     else
+//         s = Sales_data(); 
+//     return in;
+// }
+
+// 14.11 
+std::istream & operator>>(std::istream &in, Sales_data & s)
 {
     double price;
     in >> s.bookNo >> s.units_sold >> price;
-    if(in)
-        s.revenue = s.units_sold * price;
-    else
-        s = Sales_data(); 
+    s.revenue = s.units_sold * price;
     return in;
 }

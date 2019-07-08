@@ -22,6 +22,7 @@ class StrBlob{
     bool empty() const { return data->empty(); }
 
     void push_back(const string &t) { data->push_back(t); }
+    void push_back(string&& t){data->push_back(std::move(t));}
     void pop_back();
 
     string &front();

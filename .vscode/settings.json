@@ -1,3 +1,5 @@
 {
-    "cmake.cmakePath": "/usr/bin/cmake"
+    "cmake.cmakePath": "/usr/bin/cmake",
+    "vim.useCtrlKeys": false,
+    "editor.formatOnType": true
 }

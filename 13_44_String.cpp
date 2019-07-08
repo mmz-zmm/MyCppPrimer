@@ -98,4 +98,17 @@ void String::reallocate()
     cap = elements + newcapacity + 1;
 }
 
+bool operator==(const String &lhs, const String &rhs)
+{
+    return (lhs.size() == rhs.size()) &&
+           std::equal(lhs.begin(), lhs.end(), rhs.begin());
+}
 
+bool operator!=(const String &lhs, const String &rhs)
+{
+    return !(lhs == rhs);
+}
+bool operator<(const String &lhs, const String &rhs)
+{
+    return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+}

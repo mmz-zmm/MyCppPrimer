@@ -9,8 +9,11 @@ using namespace std;
 class StrBlobPtr;
 class StrBlob{
     friend class StrBlobPtr;
-
+    friend bool operator==(const StrBlob &lhs, const StrBlob &rhs);
+    friend bool operator!=(const StrBlob &lhs, const StrBlob &rhs);
+    friend bool operator<(const StrBlob &lhs, const StrBlob &rhs);
   public:
+
     typedef vector<string>::size_type size_type;
     StrBlob();
     StrBlob(initializer_list<string> il);
@@ -35,6 +38,9 @@ class StrBlob{
 };
 
 class StrBlobPtr{
+    friend bool operator==(const StrBlobPtr &lhs, const StrBlobPtr &rhs);
+    friend bool operator!=(const StrBlobPtr &lhs, const StrBlobPtr &rhs);
+    friend bool operator<(const StrBlobPtr &lhs, const StrBlobPtr &rhs);
     public:
     StrBlobPtr():curr(0){}
     StrBlobPtr(StrBlob &a,size_t sz =0):wptr(a.data),curr(sz){}
@@ -51,6 +57,34 @@ class StrBlobPtr{
     size_t curr;
 };
 
+bool operator==(const StrBlob &lhs, const StrBlob &rhs)
+{
+    return *lhs.data == *rhs.data;
+}
+
+bool operator!=(const StrBlob &lhs, const StrBlob &rhs)
+{
+    return !(lhs == rhs);
+}
+
+bool operator<(const StrBlob &lhs, const StrBlob &rhs)
+{
+    return std::lexicographical_compare(lhs.data->begin(), lhs.data->end(), rhs.data->begin(), rhs.data->end());
+}
+
+bool operator==(const StrBlobPtr &lhs, const StrBlobPtr &rhs)
+{
+    return lhs.curr == rhs.curr;
+}
+bool operator!=(const StrBlobPtr &lhs, const StrBlobPtr &rhs)
+{
+    return !(lhs == rhs);
+}
+
+bool operator<(const StrBlobPtr &lhs, const StrBlobPtr &rhs)
+{
+    return lhs.curr < rhs.curr;
+}
 StrBlob::StrBlob(): data(make_shared<vector<string>>()){}
 StrBlob::StrBlob(initializer_list<string> il):data(make_shared<vector<string>>(il)){}
 

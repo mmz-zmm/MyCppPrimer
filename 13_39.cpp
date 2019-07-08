@@ -125,3 +125,17 @@ void StrOut(const StrVec& s)
     }    
 }
 
+bool operator==(const StrVec &lhs, const StrVec &rhs)
+{
+    return (lhs.size() == rhs.size()) &&
+           std::equal(lhs.begin(), lhs.end(), rhs.begin());
+}
+
+bool operator!=(const StrVec &lhs, const StrVec &rhs)
+{
+    return !(lhs == rhs);
+}
+bool operator<(const StrVec &lhs, const StrVec &rhs)
+{
+    return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
+}

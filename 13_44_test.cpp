@@ -50,5 +50,8 @@ int main()
     v_str.push_back("How");
     v_str.push_back("are");
     v_str.push_back("You");
+    for(auto &s : v_str)
+        std::cout << s << " ";
+    std::cout << std::endl;
     return 0;
 }
