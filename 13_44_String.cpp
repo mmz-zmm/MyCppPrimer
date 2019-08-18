@@ -112,3 +112,15 @@ bool operator<(const String &lhs, const String &rhs)
 {
     return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
 }
+char &String::operator[](size_t n)
+{
+    if( n > size())
+        throw std::out_of_range("out of range");
+    return elements[n];
+}
+const char &String::operator[](size_t n) const
+{
+    if( n > size())
+        throw std::out_of_range("out of range");
+    return elements[n];
+}

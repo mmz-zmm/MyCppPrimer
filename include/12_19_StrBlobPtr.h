@@ -31,8 +31,10 @@ class StrBlob{
 
     StrBlobPtr begin();
     StrBlobPtr end();
+    string &operator[](size_t n);
+    const string &operator[](size_t n) const;
 
-  private:
+private:
     shared_ptr<vector<string>> data;
     void check(size_type i, const string &msg) const;
 };
@@ -50,8 +52,27 @@ class StrBlobPtr{
         return wptr.lock() != rhs.wptr.lock() ||
                curr != rhs.curr;
     }
+    string &operator[](size_t n);
+    const string &operator[](size_t n) const;
+    StrBlobPtr &operator++();
+    StrBlobPtr operator++(int);
+    StrBlobPtr &operator--();
+    StrBlobPtr operator--(int);
+    StrBlobPtr& operator+=(size_t n);
+    StrBlobPtr operator+(size_t n);
+    StrBlobPtr& operator-=(size_t n);
+    StrBlobPtr operator-(size_t n);
+    string& operator*() const
+    {
+        auto p = check(curr, "dereference past end");
+        return (*p)[curr];
+    }
+    string * operator->() const 
+    {
+        return &this->operator*();
+    }
 
-  private:
+private:
     shared_ptr<vector<string>> check(size_t, const string &) const;
     weak_ptr<vector<string>> wptr;
     size_t curr;
@@ -70,6 +91,16 @@ bool operator!=(const StrBlob &lhs, const StrBlob &rhs)
 bool operator<(const StrBlob &lhs, const StrBlob &rhs)
 {
     return std::lexicographical_compare(lhs.data->begin(), lhs.data->end(), rhs.data->begin(), rhs.data->end());
+}
+string& StrBlob::operator[](size_t n)
+{
+    check(n, "out of range");
+    return (*data)[n];
+}
+const string& StrBlob::operator[](size_t n) const
+{
+    check(n, "out of range");
+    return (*data)[n];
 }
 
 bool operator==(const StrBlobPtr &lhs, const StrBlobPtr &rhs)
@@ -145,5 +176,66 @@ StrBlobPtr& StrBlobPtr::incr()
 StrBlobPtr StrBlob::begin() { return StrBlobPtr(*this); }
 StrBlobPtr StrBlob::end(){
     auto ret = StrBlobPtr(*this, data->size());
+    return ret;
+}
+
+string& StrBlobPtr::operator[](size_t n)
+{
+    auto data = check(n, "out of range");
+    return (*data)[n];
+}
+const string& StrBlobPtr::operator[](size_t n) const
+{
+    auto data = check(n, "out of range");
+    return (*data)[n];
+}
+StrBlobPtr & StrBlobPtr:: operator++()
+{
+    check(curr, "increment past end of StrBlobPtr");
+    ++curr;
+    return *this;
+}
+StrBlobPtr StrBlobPtr::operator++(int)
+{
+    StrBlobPtr ret = *this;
+    ++*this;
+    return ret;
+}
+StrBlobPtr &StrBlobPtr::operator--()
+{
+    --curr;
+    check(curr, "decrement past begin of StrBlobPtr");
+    return *this;
+}
+StrBlobPtr StrBlobPtr::operator--(int)
+{
+    StrBlobPtr ret = *this;
+    --*this;
+    return ret;
+}
+
+StrBlobPtr& StrBlobPtr::operator+=(size_t n)
+{
+    curr += n;
+    check(curr, "increment past the end of StrBlobPtr");
+    return *this;
+}
+
+StrBlobPtr& StrBlobPtr::operator-=(size_t n)
+{
+    curr -= n;
+    check(curr, "decrement past the start of StrBlobPtr");
+    return *this;
+}
+StrBlobPtr StrBlobPtr::operator+(size_t n)
+{
+    StrBlobPtr ret = *this;
+    ret += n;
+    return ret;
+}
+StrBlobPtr StrBlobPtr::operator-(size_t n)
+{
+    StrBlobPtr ret = *this;
+    ret -= n;
     return ret;
 }

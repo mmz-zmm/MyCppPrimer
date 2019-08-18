@@ -18,6 +18,7 @@ public:
   StrVec(std::initializer_list<std::string>);
   StrVec &operator=(const StrVec &);
   StrVec &operator=(StrVec &&) noexcept;
+  StrVec &operator=(std::initializer_list<std::string>);
   ~StrVec();
   void push_back(const std::string &);
   size_t size() const { return first_free - elements; }
@@ -27,6 +28,8 @@ public:
   void reserve(size_t n);
   void resize(size_t n);
   void resize(size_t n, const std::string &s);
+  std::string& operator[](std::size_t n);
+  const std::string& operator[](std::size_t n) const;
 
 private:
   /* 类的静态成员需要类外初始化 */

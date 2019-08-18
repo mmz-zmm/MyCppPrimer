@@ -44,6 +44,15 @@ class ConstStrBlobPtr{
         return wptr.lock() != rhs.wptr.lock() ||
                curr != rhs.curr;
     }
+    const string & operator*() const 
+    {
+        auto p = check(curr, "dereference past end");
+        return (*p)[curr];
+    }
+    const string * operator->() const 
+    {
+        return &this->operator*();
+    }
 
   private:
     shared_ptr<vector<string>> check(size_t, const string &) const;

@@ -139,3 +139,25 @@ bool operator<(const StrVec &lhs, const StrVec &rhs)
 {
     return std::lexicographical_compare(lhs.begin(), lhs.end(), rhs.begin(), rhs.end());
 }
+
+StrVec & StrVec::operator=(std::initializer_list<std::string> il)
+{
+    auto data = alloc_n_copy(il.begin(), il.end());
+    free();
+    elements = data.first;
+    first_free = cap = data.second;
+    return *this;
+}
+std::string& StrVec::operator[](std::size_t n)
+{
+    if (n >= (*this).size())
+        throw std::out_of_range("out of range");
+    return elements[n];
+}
+
+const std::string& StrVec::operator[](std::size_t n) const
+{
+    if (n >= (*this).size())
+        throw std::out_of_range("out of range");
+    return elements[n];  
+}

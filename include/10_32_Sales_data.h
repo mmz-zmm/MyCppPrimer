@@ -15,6 +15,7 @@ public:
     Sales_data(std::istream & in) {  in >> *this ; }
 
     Sales_data &operator+=(const Sales_data &);
+    Sales_data &operator=(const std::string &isbn);
     std::string isbn() const { return bookNo; }
 
 private:
@@ -69,4 +70,10 @@ std::istream & operator>>(std::istream &in, Sales_data & s)
     in >> s.bookNo >> s.units_sold >> price;
     s.revenue = s.units_sold * price;
     return in;
+}
+
+Sales_data &Sales_data::operator=(const std::string &isbn)
+{
+    *this = Sales_data(isbn);
+    return *this;
 }

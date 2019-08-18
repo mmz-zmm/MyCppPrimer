@@ -34,6 +34,8 @@ public:
     os << s.begin();
     return os;
   }
+  char &operator[](size_t n);
+  const char &operator[](size_t n) const;
 
 private:
   std::pair<char *, char *> alloc_n_copy(const char *, const char *);
