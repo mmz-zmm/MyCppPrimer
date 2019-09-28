@@ -76,7 +76,7 @@ String& String::operator=(String && rhs)
         elements = rhs.elements;
         first_free = rhs.first_free;
         cap = rhs.cap;
-        rhs.first_free = rhs.first_free = rhs.cap = nullptr;
+        rhs.first_free = rhs.cap = nullptr;
     }
     std::cout << "move-assignment\n";
     return *this;

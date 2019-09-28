@@ -11,7 +11,7 @@ include_directories(include)
 #set(SRC 7_41.cpp 7_41_Sales_data.cpp)
 
 
-set(SRC 14_10.cpp)
+set(SRC 14_38.cpp)
 add_library(mylib 13_44_String.cpp)
 add_executable(main ${SRC})
 target_link_libraries(main mylib)
