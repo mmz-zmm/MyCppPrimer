@@ -19,7 +19,7 @@ class isStrOfLength
 void test1428()
 {
     vector<size_t> words_len_count(11);
-    ifstream in("./include/14_38_data.txt");
+    ifstream in("./data/14_38_data.txt");
     string word;
     while(in >> word)
     {

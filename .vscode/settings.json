@@ -1,5 +1,8 @@
 {
     "cmake.cmakePath": "/usr/bin/cmake",
     "vim.useCtrlKeys": false,
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "files.associations": {
+        "string": "cpp"
+    }
 }
